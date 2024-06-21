@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF76932F-8F4E-43D0-B5B1-ACC02E936FE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>commodity_exchange_application</RootNamespace>
+    <AssemblyName>commodity_exchange_application</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\Guna\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AccountDAO.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="FormAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountSettings.Designer.cs">
+      <DependentUpon>FormAccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiaChiGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiaChiGiaoHang.Designer.cs">
+      <DependentUpon>FormDiaChiGiaoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDK_Ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDK_Ban.Designer.cs">
+      <DependentUpon>FormDK_Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemDetails.Designer.cs">
+      <DependentUpon>FormItemDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsforSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsforSale.Designer.cs">
+      <DependentUpon>FormItemsforSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLichSuMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSuMuaHang.Designer.cs">
+      <DependentUpon>FormLichSuMuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMatHang.Designer.cs">
+      <DependentUpon>FormMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessenger.Designer.cs">
+      <DependentUpon>FormMessenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMess_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMess_List.Designer.cs">
+      <DependentUpon>FormMess_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonalIdentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonalIdentification.Designer.cs">
+      <DependentUpon>FormPersonalIdentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonal_Information .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonal_Information .Designer.cs">
+      <DependentUpon>FormPersonal_Information .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPostManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPostManagement.Designer.cs">
+      <DependentUpon>FormPostManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductInfo.Designer.cs">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseHistory.Designer.cs">
+      <DependentUpon>FormPurchaseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignUp.Designer.cs">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemDiaChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemDiaChi.Designer.cs">
+      <DependentUpon>FormThemDiaChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="productDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucChiTietSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucChiTietSP.Designer.cs">
+      <DependentUpon>ucChiTietSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDiaChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDiaChi.Designer.cs">
+      <DependentUpon>ucDiaChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDonHang.Designer.cs">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLSMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLSMua.Designer.cs">
+      <DependentUpon>ucLSMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPost.Designer.cs">
+      <DependentUpon>ucPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThanhToan.Designer.cs">
+      <DependentUpon>ucThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserDAO.cs" />
+    <EmbeddedResource Include="FormAccountSettings.resx">
+      <DependentUpon>FormAccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiaChiGiaoHang.resx">
+      <DependentUpon>FormDiaChiGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDK_Ban.resx">
+      <DependentUpon>FormDK_Ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemDetails.resx">
+      <DependentUpon>FormItemDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsforSale.resx">
+      <DependentUpon>FormItemsforSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLichSuMuaHang.resx">
+      <DependentUpon>FormLichSuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMatHang.resx">
+      <DependentUpon>FormMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessenger.resx">
+      <DependentUpon>FormMessenger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMess_List.resx">
+      <DependentUpon>FormMess_List.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonalIdentification.resx">
+      <DependentUpon>FormPersonalIdentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonal_Information .resx">
+      <DependentUpon>FormPersonal_Information .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPostManagement.resx">
+      <DependentUpon>FormPostManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductInfo.resx">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseHistory.resx">
+      <DependentUpon>FormPurchaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignUp.resx">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemDiaChi.resx">
+      <DependentUpon>FormThemDiaChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucChiTietSP.resx">
+      <DependentUpon>ucChiTietSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDiaChi.resx">
+      <DependentUpon>ucDiaChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDonHang.resx">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLSMua.resx">
+      <DependentUpon>ucLSMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPost.resx">
+      <DependentUpon>ucPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucThanhToan.resx">
+      <DependentUpon>ucThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon add.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
